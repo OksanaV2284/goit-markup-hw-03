@@ -7,7 +7,13 @@
 --footer-bg-cl:#2F303A;
 --baner-cl:#2F303A;
 --cl-txt-ft: rgba(255, 255, 255, 0.6);
-
+--bg-cl-btn: #F5F4FA;
+/* змінні для сітки в портфоліо */
+ --items: 3;
+  --indent: 30px;
+  /* змінні для сітки в команді */
+ --items-team:4;
+  --indent-team: 30px;
 }
  
 
@@ -20,6 +26,80 @@ body {
  font-weight: 400;
 }
 
+
+
+/* скидання стилів */
+
+
+.list{
+ list-style: none;
+  margin: 0;
+  padding: 0;
+   
+}
+.link {
+  text-decoration: none;
+ 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+/* section {
+  outline: 2px solid red;
+}
+
+p {
+  outline: 2px solid black;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+  outline: 2px solid yellow;
+}
+
+a {
+  outline: 2px solid blue;
+} */
+
+
+ .container{
+width: 1200px;
+padding-top: 15px;
+padding-bottom: 15px;
+margin-left:auto;
+margin-right:auto;
+
+
+
+} 
+
+
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+}
+/* шапка */
+ .header-container{
+  display: flex;
+  align-items: center;
+   border-bottom: 1px solid #ECECEC;
+  
+ }
+
 /* логотип */
 .logo {
  color: #000000;
@@ -29,7 +109,9 @@ body {
  font-weight: 700;
  font-size: 26px;
  line-height: calc( 31 / 26);
- 
+
+margin-right: 93px;
+
 
 }
 .logo:hover, 
@@ -44,29 +126,43 @@ body {
 .span:focus{
     color: var(--accent-color);
 }
-/* заберає лишнє */
-.list{
-    list-style: none;
-}
-.link {
-    text-decoration: none;
-}
+
 .link:hover,
 .link:focus{
     color: var(--accent-color);
 }
 
-/* навігація головна*/
 
-.link-nav{
+
+/* навігація головна*/
+.nav{
+  margin-right: auto;
+}
+
+.list-nav{
+display: flex;
+gap: 50px;
+ align-items: center;
+
+}
+
+.link-nav{  
+ 
 font-weight: 500;
 font-size: 14px;
 line-height: calc(16 / 14);
 letter-spacing: 0.02em;
 color:var(--main-tx-cl);
+
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
+
 }
 
-
+.list-item .link:active{
+    color: var(--accent-color);
+}
 
 .link-nav:active{
    background-color : var(--accent-color);}
@@ -78,33 +174,47 @@ font-weight: 500;
 font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.02em;
+
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
 } 
 
 
-.list-item .link:active{
-    color: var(--accent-color);
-}
 
 /* банер */
-.section{
+.hero{
 background-color: var(--baner-cl);
  letter-spacing: 0.06em;
  color: var(--white-txt-cl);
   
 }
+.hero-container{
+  
+  padding-top: 200px;
+  padding-bottom: 280px;
+ 
 
+}
 
-.section-title {
+.hero-title {
   color: var(--white-cl); 
   font-weight: 900;
   line-height: calc(60 / 44);
   font-size: 44px;
   text-align: center;
   text-transform: uppercase;
+
+    margin-left: auto;
+  margin-right: auto;
+
+   margin-bottom: 30px;
+  width: 696px;
+ 
 }
 
 
-.section-btn {  
+.hero-btn {  
     font-family: inherit;
     color:var(--white-txt-cl); 
     background-color:var(--accent-color);
@@ -113,11 +223,22 @@ background-color: var(--baner-cl);
     line-height: calc(30 / 16);  
     cursor: pointer;  
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;   
+  
+display: block;
+    border-radius: 4px;     
+    padding: 10px 32px;
+    width: 216px;
+    border: none;
+    margin-left: auto;
+   margin-right: auto;
+
+   
 }
 
 
 /* особливості */
+
+
 
 .visually-hidden {
 	  position: absolute;
@@ -135,6 +256,12 @@ background-color: var(--baner-cl);
 
 
 
+
+.special-list{
+
+  display: flex;
+  gap: 30px;
+}
 .special-title{
 
 font-weight: 700;
@@ -143,7 +270,14 @@ line-height: calc(16 / 14);
 text-transform: uppercase;
 color:var(--main-tx-cl);
 
+margin-bottom: 10px;
 }
+
+
+.special-item{
+margin-bottom: 10px;
+}
+
 .special-par{
 font-size: 14px;
 line-height: calc(24 / 14);
@@ -155,37 +289,70 @@ color:var(--main-tx-par);
     color: var(--main-tx-cl);
      font-size: 36px;  
   line-height: calc(42 / 36);
+  text-align: center;
+  margin-bottom: 50px ;
 
+}
+
+.work-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 
 /* наша команда */
+
+
 .team{    
-    background-color: var(--main-bg-cl); 
+ background-color: var(--main-bg-cl); 
+}
+
+.team-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  
 }
 .team-title{
 font-size: 36px;
 line-height: 42px;
 text-align: center;
-letter-spacing: 0.03em;
 color: var(--main-tx-cl);
+
+margin-top: 94px;
+margin-bottom: 54px;
+ 
 }
 
-.item{
-    background-color: var(--main-bg-cl);
+.team-item{
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+margin-bottom: 20;
+
+
 }
+.team-img{
+  margin-bottom: 30px;
+}
+
+
 .item-title{
 font-weight: 500;
 font-size: 16px;
 line-height: calc(19 / 16);
 text-align: center;
-color:var(--main-tx-cl);  
+color:var(--main-tx-cl); 
+
+margin-bottom: 10px;
+
 }
 .team-par{
 font-size: 16px;
 line-height: calc(19 / 16 );
 text-align: center;
 color:var(--main-tx-par);
+
+margin-bottom: 30px;
 }
 
 
@@ -195,14 +362,18 @@ color:var(--main-tx-par);
     background-color: var(--footer-bg-cl);
    
 }
+.footer-container{
+ 
+}
 
 .logo-ft{
 
-    color:var(--white-txt-cl);
+ color:var(--white-txt-cl);
  font-weight: 700;
  font-size: 26px;
  line-height: calc(31 / 26);
  text-decoration: none;
+ margin-bottom: 20px;
 }
 .logo-ft:hover,
 .logo-ft:hover{
@@ -211,6 +382,10 @@ color:var(--main-tx-par);
 
 
 /* адрес в підвалі */
+.address{
+
+ 
+}
 .address-post{
 font-family:inherit;
 font-style: normal;
@@ -228,6 +403,18 @@ color: var(--cl-txt-ft);
 }
 /* ПОРТФОЛІО */
 /* список  кнопок, радіокнопок */
+
+.list-portfolio{
+   display: flex;
+ gap: 8px; 
+  align-items: center;
+  justify-content:center;
+  margin-bottom: 34px;
+   
+}
+
+
+
 .btn{
  font-family: inherit;
 font-weight: 500;
@@ -235,11 +422,15 @@ font-size: 16px;
 line-height: calc(26 / 16);
 text-align: center;
 color: var(--main-tx-cl);
-background-color: var(--main-bg-cl);
+
 text-decoration: none;
 border-radius: 4px;
 cursor: pointer;
+background:var(--bg-cl-btn);
+
+border: none;
 }
+
 .btn:hover,
 .btn:focus{
     color:var(--accent-color);
@@ -251,7 +442,20 @@ cursor: pointer;
 }
 /* список робіт */
 
+.portfolio-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+ 
+}
 
+.portfolio-item{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+.team-img{
+  margin-bottom: 20px;
+}
 
 .title{
   
