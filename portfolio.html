@@ -10,12 +10,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
+    <!--нормалізація стилів-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- шапка-->
-      <header class="header ">
+     <header class="header ">
       <div class="container header-container" >
         <a class="logo" href="/"> <span class="span">Web</span>Studio </a>
        <nav class="nav ">         
@@ -49,9 +53,12 @@
     <!-- Унікальний контент сторінки -->
     <main>
       <section class="portfolio section">
-        <h1 class="visually-hidden"> Наша робота</h1>
+        <div class="container">        
+          <h1 class="visually-hidden"> Наша робота</h1>
+        </div>
         <!--список кнопок, радіокнопок -->
-        <ul class="list list-portfolio">
+        <div class="container">
+        <ul class="list list-btn">
           <li class="item-btn">
             <button class="btn" type="button">Усі</button>
           </li>
@@ -68,94 +75,116 @@
             <button class="btn" type="button">Маркетинг</button>
           </li>
         </ul>
+        </div>
         <!--список робіт-->
         <div class="container">
           <ul class="portfolio-list list">
             <li class="portfolio-item">
               <a class="link" href="">
-                <img
-                  class="team-img"
+                <img                  
                   src="./images/img-1.jpg"
                   alt="екран ноутбука з фотографіями людей"
                   width="370"
-                  height="294"
-                />
-                <h2 class="title link">Технокряк</h2>
-                <p class="par link">Веб-сайт</p>
+                   />
+                <div class="portfolio-el">
+                <h2 class="title ">Технокряк</h2>
+                <p class="par ">Веб-сайт</p>
+                </div>
               </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
-                <img class="team-img"
-                src="./images/img-2.jpg " alt="два баскетболісти" width="370" height="294" />
-                <h2 class="title link"> Постер New Orlean vs Golden Star </h2>
-                <p class="par link">Дизайн</p>
+                <img 
+                src="./images/img-2.jpg " 
+                alt="два баскетболісти" 
+                width="370" 
+                height="294" />
+                <div class="portfolio-el">
+                <h2 class="title"> Постер New Orlean vs Golden Star </h2>
+                <p class="par ">Дизайн</p>
+                </div>
               </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
                 <img class="team-img"
                 src="./images/img-3.jpg " alt="риба" width="370" height="294" />
-                <h2 class="title link">Ресторан Seafood</h2>
-                <p class="par link">Додаток</p>
+                <div class="portfolio-el">
+                <h2 class="title ">Ресторан Seafood</h2>
+                <p class="par ">Додаток</p>
+                </div>
               </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
-                <img class="team-img"
+                <img 
                  src="./images/img-4.jpg " alt="чорні навушники" width="370" height="294" />
-                <h2 class="title link">Проєкт Prime</h2>
-                <p class="par link">Маркетинг</p>
+                 <div class="portfolio-el">
+                <h2 class="title ">Проєкт Prime</h2>
+                <p class="par ">Маркетинг</p>
+                </div>
               </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
-                <img class="team-img"
+                <img 
                 src="./images/img-5.jpg " alt="дві коробки" width="370" height="294" />
-                <h2 class="title link">Проєкт Boxes</h2>
-                <p class="par link">Додаток</p>
+                <div class="portfolio-el">
+                <h2 class="title ">Проєкт Boxes</h2>
+                <p class="par ">Додаток</p>
+                </div>
               </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
-                <img class="team-img"
+                <img 
                 src="./images/img-6.jpg " alt="екран компа" width="370" height="294" />
+                <div class="portfolio-el">
                 <h2 class="title" lang="en">Inspiration has no Borders</h2>
-                <p class="par link">Веб-сайт</p>
-              </a>
+                <p class="par ">Веб-сайт</p>
+              </div>  
+            </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
-                <img class="team-img"
+                <img 
                  src="./images/img-7.jpg " alt="розгорнута книга" width="370" height="294" />
-                <h2 class="title link">Видання Limited Edition</h2>
-                <p class="par link">Дизайн</p>
-              </a>
+                 <div class="portfolio-el">
+                <h2 class="title ">Видання Limited Edition</h2>
+                <p class="par ">Дизайн</p>
+                 </div> 
+            </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
                 <img src="./images/img-8.jpg " alt="лейба" width="370" height="294" />
-                <h2 class="title link">Проєкт LAB</h2>
-                <p class="par link">Маркетинг</p>
+                <div class="portfolio-el">
+                <h2 class="title ">Проєкт LAB</h2>
+                <p class="par ">Маркетинг</p>
+                </div>
               </a>
             </li>
             <li class="portfolio-item">
               <a class="link" href="">
-                <img class="team-img"
+                <img 
                 src="./images/img-9.jpg " alt="відкритий ноутбук" width="370" height="294" />
-                <h2 class="title link" lang="en">Growing Business</h2>
-                <p class="par link">Додаток</p>
-              </a>
+                <div class="portfolio-el">
+                <h2 class="title " lang="en">Growing Business</h2>
+                <p class="par ">Додаток</p>
+               </div>   
+          </a>
             </li>
           </ul>
         </div>
+        
       </section>
     </main>
     <!-- підвал сторінки-->
     <footer class="footer">
-      <a class="logo-ft" href="/"> <span class="span">Web</span>Studio </a>
-      <!-- адрес-->
-      <address class="address">
+      <div class="container footer-container ">              
+       <a class="logo-ft" href="/"> <span class="span">Web</span>Studio </a>
+       <!-- адрес-->
+       <address class="address">
         <ul class="list">
           <li class="address-item">
             <a
@@ -166,14 +195,20 @@
               >м. Київ, пр-т Лесі Українки, 26
             </a>
           </li>
-          <li>
-            <a class="address-el link" href="mailto:info@devstudio.com">info@example.com <br /> </a>
+          <li class="address-item">
+            <a class="address-el link" href="mailto:info@devstudio.com"
+              >info@example.com <br />
+            </a>
           </li>
-          <li>
-            <a class="address-el link" href="tel:+380961111111">+38 099 111 11 11 </a>
+          <li class="address-item">
+            <a class="address-el link" href="tel:+380961111111"
+              >+38 099 111 11 11
+            </a>
           </li>
         </ul>
-      </address>
+       </address>
+      </div>
     </footer>
+  </body>
   </body>
 </html>
