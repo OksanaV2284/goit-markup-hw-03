@@ -81,10 +81,13 @@ a {
   padding-bottom: 94px;
 }
 /* шапка */
+.header{
+border-bottom: 1px solid #ececec;
+}
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
+  
 }
 
 /* логотип */
@@ -140,13 +143,12 @@ a {
   padding-bottom: 32px;
 }
 
-.list-item .link:active {
+.link-nav.current{
   color: var(--accent-color);
+
 }
 
-.link-nav:active {
-  background-color: var(--accent-color);
-}
+
 
 .auth {
   color: var(--main-tx-par);
@@ -207,6 +209,13 @@ a {
   margin-right: auto;
 }
 
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #188CE8;
+
+}
+
+
 /* особливості */
 .special{
   padding-top: 94px;
@@ -237,14 +246,15 @@ a {
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--main-tx-cl);
-  /* перерахувати ширину за формулою */
   
 
   margin-bottom: 10px;
-  flex-basis:calc((100%-30px*3)/4) 
+  
 }
 
 .special-item {
+
+flex-basis:calc((100%-30px*3)/4) 
 }
 
 .special-par {
@@ -271,7 +281,7 @@ a {
 /* наша команда */
 
 .team {
-  background-color: var(--main-bg-cl);
+  background-color: var(--bg-cl-btn);
   padding-top: 94px;
 }
 
@@ -323,10 +333,7 @@ padding: 30px;
  
 }
 
-  .footer-container{
 
- margin: 0;
-  }  
 
 
 .logo-ft {
@@ -391,8 +398,8 @@ padding: 30px;
   gap: 8px;
   align-items: center;
   justify-content: center;
-  padding: 6px 22px;
-  margin-bottom: 34px;
+  
+  margin-bottom: 50px;
 }
 
 .btn {
